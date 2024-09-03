@@ -1,16 +1,40 @@
 {
   "name": "k-zustand",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "main": "./index.js",
   "type": "commonjs",
+  "types": "./index.d.ts",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "import": {
+        "types": "./esm/index.d.mts",
+        "default": "./esm/index.mjs"
+      },
+      "default": {
+        "types": "./index.d.ts",
+        "default": "./index.js"
+      }
+    },
+    "./*": {
+      "import": {
+        "types": "./esm/*.d.mts",
+        "default": "./esm/*.mjs"
+      },
+      "default": {
+        "types": "./*.d.ts",
+        "default": "./*.js"
+      }
+    }
+  },
   "scripts": {
     "test": "vitest",
     "coverage": "vitest run --coverage",
     "build": "rollup -c"
   },
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "author": "kinzaz",
+  "license": "MIT",
+  "description": "Mini version of zustand state manager",
   "devDependencies": {
     "@rollup/plugin-alias": "^5.1.0",
     "@rollup/plugin-node-resolve": "^15.2.3",
