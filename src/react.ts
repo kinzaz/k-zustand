@@ -1,5 +1,6 @@
-import ReactExports from "react";
-import { createStore, StateCreator, StoreApi } from "./vanilla";
+import * as ReactExports from "react";
+import { createStore } from "./vanilla";
+import type { StateCreator, StoreApi } from "./vanilla.ts";
 
 type ReadonlyStoreApi<T> = Pick<StoreApi<T>, "getState" | "subscribe">;
 

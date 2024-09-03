@@ -1,19 +1,29 @@
 {
   "name": "k-zustand",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "./index.js",
+  "type": "commonjs",
   "scripts": {
     "test": "vitest",
-    "coverage": "vitest run --coverage"
+    "coverage": "vitest run --coverage",
+    "build": "rollup -c"
   },
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@rollup/plugin-alias": "^5.1.0",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-replace": "^5.0.7",
+    "@rollup/plugin-typescript": "^11.1.6",
     "@testing-library/react": "^16.0.1",
+    "@types/react": "^18.3.5",
     "jsdom": "^25.0.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "rollup": "^4.21.2",
+    "tslib": "^2.7.0",
+    "typescript": "^5.5.4",
     "vitest": "^2.0.5"
   }
 }
