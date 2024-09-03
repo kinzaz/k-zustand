@@ -1,6 +1,6 @@
 {
   "name": "k-zustand",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "main": "./index.js",
   "type": "commonjs",
   "types": "./index.d.ts",
@@ -27,6 +27,9 @@
       }
     }
   },
+  "files": [
+    "**"
+  ],
   "scripts": {
     "test": "vitest",
     "coverage": "vitest run --coverage",
